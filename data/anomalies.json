@@ -1,0 +1,130 @@
+[
+  {
+    "tipo": "risposte_corrette_anomale",
+    "progressivo": "1.2.1-55",
+    "domanda": "Per \"S drive\" si intende:",
+    "n_corrette": 2
+  },
+  {
+    "tipo": "progressivo_malformato",
+    "progressivo": "1.3.2.113",
+    "domanda": "In caso di un grave infortunio occorso ad un membro dell'equipaggio durante la navigazione, quale Ente sarà opportuno contattare il prima possibile?",
+    "tema": "SICUREZZA DELLA NAVIGAZIONE",
+    "voce": "Centro Internazionale Radio Medico (CIRM)."
+  },
+  {
+    "tipo": "progressivo_malformato",
+    "progressivo": "1.6.1.97",
+    "domanda": "Come si definisce una corrente di marea?",
+    "tema": "METEOROLOGIA",
+    "voce": "Elementi di meteorologia e strumenti"
+  },
+  {
+    "tipo": "risposte_corrette_anomale",
+    "progressivo": "2.1.1-49",
+    "domanda": "Per andatura si intende la direzione verso cui procede un'unità a vela rispetto alla direzione di provenienza del vento.",
+    "n_corrette": 0
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 19,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 20,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 21,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 22,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 23,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 24,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 25,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 26,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 27,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.1",
+    "numero_mancante": 28,
+    "max_nel_gruppo": 58
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.2.3",
+    "numero_mancante": 8,
+    "max_nel_gruppo": 21
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.3.4",
+    "numero_mancante": 10,
+    "max_nel_gruppo": 19
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.3.4",
+    "numero_mancante": 11,
+    "max_nel_gruppo": 19
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.3.4",
+    "numero_mancante": 12,
+    "max_nel_gruppo": 19
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.3.4",
+    "numero_mancante": 13,
+    "max_nel_gruppo": 19
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.3.4",
+    "numero_mancante": 14,
+    "max_nel_gruppo": 19
+  },
+  {
+    "tipo": "numero_progressivo_mancante",
+    "gruppo": "1.3.4",
+    "numero_mancante": 15,
+    "max_nel_gruppo": 19
+  }
+]

@@ -1,0 +1,23 @@
+/* Override e regole personalizzate */
+.figura-img {
+  max-width: 100%;
+  max-height: 320px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  padding: 4px;
+  object-fit: contain;
+}
+
+.timer-warning { animation: pulse 1s infinite; color: #b91c1c; }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.q-card { transition: box-shadow 0.15s ease; }
+.q-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+.btn-grid button {
+  text-align: left;
+}

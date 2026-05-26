@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Patente Nautica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+  <header class="bg-sky-700 text-white shadow">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#/home" class="font-bold text-lg">⚓ Quiz Patente Nautica</a>
+      <nav class="flex gap-4 text-sm">
+        <a href="#/home" class="hover:underline">Home</a>
+        <a href="#/sbagliate" class="hover:underline">Sbagliate</a>
+        <a href="#/anomalie" class="hover:underline text-sky-200">Revisione</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="view" class="flex-1 max-w-5xl w-full mx-auto px-4 py-6">
+    <div class="text-center text-slate-500 py-10">Caricamento…</div>
+  </main>
+
+  <footer class="text-center text-xs text-slate-500 py-4 border-t border-slate-200">
+    Categoria A senza limiti dalla costa · vela + motore · dati ufficiali DD 131/2022
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
