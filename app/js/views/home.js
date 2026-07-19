@@ -11,11 +11,20 @@ function fmtDate(ts) {
   return new Date(ts).toLocaleString("it-IT", { dateStyle: "short", timeStyle: "short" });
 }
 
+async function loadVersion() {
+  try {
+    const res = await fetch("data/version.json", { cache: "no-cache" });
+    if (res.ok) return await res.json();
+  } catch (_) {}
+  return null;
+}
+
 export async function renderHome(root) {
-  const [quiz, attempts, sessions] = await Promise.all([
+  const [quiz, attempts, sessions, version] = await Promise.all([
     loadQuiz(),
     getAllAttempts(),
     getAllSessions(),
+    loadVersion(),
   ]);
 
   const totBase = quiz.filter((q) => q.sezione === "base").length;
@@ -121,6 +130,12 @@ export async function renderHome(root) {
         <button id="reset-btn" class="text-xs text-rose-600 hover:underline">Azzera statistiche</button>
       </div>
     ` : ""}
+
+    ${version?.updated ? (() => {
+      const [y, m, d] = version.updated.split("-");
+      const label = new Date(+y, +m - 1, +d).toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
+      return `<div class="text-center text-xs text-slate-400 mt-8">Ultimo aggiornamento: ${label}</div>`;
+    })() : ""}
   `;
 
   const reset = root.querySelector("#reset-btn");

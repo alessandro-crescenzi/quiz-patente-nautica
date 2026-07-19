@@ -21,6 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Write version info
+        run: |
+          DATE=$(git log -1 --format='%as' -- app/ data/)
+          echo "{\"updated\":\"$DATE\"}" > app/data/version.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
