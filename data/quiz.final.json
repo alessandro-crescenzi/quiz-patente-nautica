@@ -5195,7 +5195,7 @@
       },
       {
         "testo": "il circuito di alimentazione degli iniettori.",
-        "corretta": true
+        "corretta": false
       }
     ],
     "figura": null
@@ -7571,6 +7571,144 @@
   },
   {
     "sezione": "base",
+    "progressivo": "1.3.4-10",
+    "capitolo": "BASE",
+    "tema": "SICUREZZA DELLA NAVIGAZIONE",
+    "voce": "Tipi di visite, loro periodicità e certificazioni",
+    "domanda": "I natanti da diporto sono soggetti al rilascio del certificato di sicurezza?",
+    "risposte": [
+      {
+        "testo": "sì, ogni 3 anni.",
+        "corretta": false
+      },
+      {
+        "testo": "sì, ogni 5 anni.",
+        "corretta": false
+      },
+      {
+        "testo": "no, non sono soggetti.",
+        "corretta": true
+      }
+    ],
+    "figura": null
+  },
+  {
+    "sezione": "base",
+    "progressivo": "1.3.4-11",
+    "capitolo": "BASE",
+    "tema": "SICUREZZA DELLA NAVIGAZIONE",
+    "voce": "Tipi di visite, loro periodicità e certificazioni",
+    "domanda": "La convalida del Certificato di Sicurezza di un'imbarcazione da diporto va effettuata:",
+    "risposte": [
+      {
+        "testo": "ogni qualvolta viene varata.",
+        "corretta": false
+      },
+      {
+        "testo": "ogni 20 anni.",
+        "corretta": false
+      },
+      {
+        "testo": "nel caso in cui l'unità abbia subito gravi avarie o siano state apportate innovazioni.",
+        "corretta": true
+      }
+    ],
+    "figura": null
+  },
+  {
+    "sezione": "base",
+    "progressivo": "1.3.4-12",
+    "capitolo": "BASE",
+    "tema": "SICUREZZA DELLA NAVIGAZIONE",
+    "voce": "Tipi di visite, loro periodicità e certificazioni",
+    "domanda": "Quali tra questi requisiti sono necessari per il rinnovo del Certificato di Sicurezza di un'unità da diporto?",
+    "risposte": [
+      {
+        "testo": "rilascio di apposita attestazione di idoneità da parte della Motorizzazione Civile territoriale.",
+        "corretta": false
+      },
+      {
+        "testo": "rilascio di apposita attestazione di idoneità da parte di un Organismo Tecnico affidato.",
+        "corretta": true
+      },
+      {
+        "testo": "rilascio di apposita attestazione di idoneità da parte dell'Ufficio Marittimo.",
+        "corretta": false
+      }
+    ],
+    "figura": null
+  },
+  {
+    "sezione": "base",
+    "progressivo": "1.3.4-13",
+    "capitolo": "BASE",
+    "tema": "SICUREZZA DELLA NAVIGAZIONE",
+    "voce": "Tipi di visite, loro periodicità e certificazioni",
+    "domanda": "Il Certificato di Sicurezza:",
+    "risposte": [
+      {
+        "testo": "si rinnova di diritto ogni 3 anni.",
+        "corretta": false
+      },
+      {
+        "testo": "si rinnova ogni 5 anni.",
+        "corretta": true
+      },
+      {
+        "testo": "si rinnova quando richiesto dall'Organismo Tecnico affidato.",
+        "corretta": false
+      }
+    ],
+    "figura": null
+  },
+  {
+    "sezione": "base",
+    "progressivo": "1.3.4-14",
+    "capitolo": "BASE",
+    "tema": "SICUREZZA DELLA NAVIGAZIONE",
+    "voce": "Tipi di visite, loro periodicità e certificazioni",
+    "domanda": "Il Certificato di Sicurezza di un'unità da diporto, in caso di primo rilascio:",
+    "risposte": [
+      {
+        "testo": "ha validità di otto anni dall'immatricolazione per le unità appartenenti alle categorie di progettazione A e B.",
+        "corretta": true
+      },
+      {
+        "testo": "ha validità di cinque anni dall'immatricolazione per le unità appartenenti alle categorie di progettazione A e B.",
+        "corretta": false
+      },
+      {
+        "testo": "ha validità di cinque anni dall'immatricolazione per le unità appartenenti alle categorie di progettazione A, B e C.",
+        "corretta": false
+      }
+    ],
+    "figura": null
+  },
+  {
+    "sezione": "base",
+    "progressivo": "1.3.4-15",
+    "capitolo": "BASE",
+    "tema": "SICUREZZA DELLA NAVIGAZIONE",
+    "voce": "Tipi di visite, loro periodicità e certificazioni",
+    "domanda": "Il Certificato di Sicurezza di un'unità da diporto, in caso di primo rilascio,",
+    "risposte": [
+      {
+        "testo": "ha validità di otto anni dall'immatricolazione per le unità appartenenti alle categorie di progettazione C e D.",
+        "corretta": false
+      },
+      {
+        "testo": "ha validità di dieci anni dall'immatricolazione per le unità appartenenti alle categorie di progettazione C e D.",
+        "corretta": true
+      },
+      {
+        "testo": "ha validità di cinque anni dall'immatricolazione per le unità appartenenti alle categorie di progettazione B, C e D.",
+        "corretta": false
+      }
+    ],
+    "figura": null
+  },
+  {
+    "sezione": "base",
     "progressivo": "1.3.4-16",
     "capitolo": "BASE",
     "tema": "SICUREZZA DELLA NAVIGAZIONE",
@@ -8698,7 +8836,7 @@
   },
   {
     "sezione": "base",
-    "progressivo": "1.3.2.113",
+    "progressivo": "1.3.2-113",
     "capitolo": "BASE",
     "tema": "SICUREZZA DELLA NAVIGAZIONE",
     "voce": "Centro Internazionale Radio Medico (CIRM).",
@@ -21532,7 +21670,7 @@
   },
   {
     "sezione": "base",
-    "progressivo": "1.6.1.97",
+    "progressivo": "1.6.1-97",
     "capitolo": "BASE",
     "tema": "METEOROLOGIA",
     "voce": "Elementi di meteorologia e strumenti",
@@ -34645,7 +34783,7 @@
     "risposte": [
       {
         "testo": "VERO",
-        "corretta": false
+        "corretta": true
       },
       {
         "testo": "FALSO",

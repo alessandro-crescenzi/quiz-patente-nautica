@@ -105,10 +105,10 @@ def extract_rows_for_page(pl_page, fitz_page, xref_map, section: str, expected_c
                 continue
 
             if section == "base":
-                # 13 colonne attese
-                if len(row_texts) != 13:
+                # 13 colonne attese; alcune pagine ne hanno 14 (colonna vuota in fondo)
+                if len(row_texts) not in (13, 14):
                     continue
-                _num_loc, _img, dom, r1, vf1, r2, vf2, r3, vf3, prog, cap, tema, voce = row_texts
+                _num_loc, _img, dom, r1, vf1, r2, vf2, r3, vf3, prog, cap, tema, voce = row_texts[:13]
                 immagine_bbox = cells_bbox[1] if len(cells_bbox) > 1 else None
                 risposte = [
                     (clean(r1), (vf1 or "").strip().upper() == "V"),
