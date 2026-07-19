@@ -28,18 +28,45 @@ export const ALLEGATO_C = [
   { match: "NORMATIVA", n: 3, etichetta: "Normativa diportistica" },
 ];
 
-function pickN(arr, n, rand) {
+// Pesi: mai vista=10, ultima risposta sbagliata=5, ultima risposta corretta=1
+const WEIGHT_UNSEEN = 10;
+const WEIGHT_WRONG = 5;
+const WEIGHT_CORRECT = 1;
+
+export function buildWeightsFromAttempts(attempts) {
+  const last = new Map();
+  for (const a of attempts) {
+    const prev = last.get(a.progressivo);
+    if (!prev || a.ts > prev.ts) last.set(a.progressivo, a);
+  }
+  const weights = new Map();
+  for (const [prog, a] of last) {
+    weights.set(prog, a.corretta ? WEIGHT_CORRECT : WEIGHT_WRONG);
+  }
+  return weights; // domande assenti → peso WEIGHT_UNSEEN (mai viste)
+}
+
+function weightedPickN(arr, n, rand, weights) {
   const copy = arr.slice();
+  const wts = copy.map((q) => weights.get(q.progressivo) ?? WEIGHT_UNSEEN);
   const out = [];
   for (let i = 0; i < n && copy.length; i++) {
-    const idx = Math.floor(rand() * copy.length);
-    out.push(copy.splice(idx, 1)[0]);
+    const total = wts.reduce((a, b) => a + b, 0);
+    let r = rand() * total;
+    let idx = 0;
+    for (idx = 0; idx < wts.length - 1; idx++) {
+      r -= wts[idx];
+      if (r <= 0) break;
+    }
+    out.push(copy[idx]);
+    copy.splice(idx, 1);
+    wts.splice(idx, 1);
   }
   return out;
 }
 
 // Restituisce 20 quiz base secondo Allegato C + 5 quiz vela
-export async function buildExamSet(seed = Date.now()) {
+export async function buildExamSet(seed = Date.now(), weights = new Map()) {
   const all = await loadQuiz();
   let s = seed >>> 0;
   const rand = () => {
@@ -56,8 +83,8 @@ export async function buildExamSet(seed = Date.now()) {
   const baseSelection = [];
   for (const cat of ALLEGATO_C) {
     const pool = base.filter((q) => (q.tema || "").toUpperCase().includes(cat.match));
-    baseSelection.push(...pickN(pool, cat.n, rand).map((q) => ({ ...q, _cat: cat.etichetta })));
+    baseSelection.push(...weightedPickN(pool, cat.n, rand, weights).map((q) => ({ ...q, _cat: cat.etichetta })));
   }
-  const velaSelection = pickN(vela, 5, rand);
+  const velaSelection = weightedPickN(vela, 5, rand, weights);
   return { base: baseSelection, vela: velaSelection };
 }

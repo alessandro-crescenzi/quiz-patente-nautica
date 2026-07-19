@@ -1,5 +1,5 @@
-import { buildExamSet, ALLEGATO_C } from "../quizData.js";
-import { addAttempt, addSession, updateSession } from "../db.js";
+import { buildExamSet, buildWeightsFromAttempts, ALLEGATO_C } from "../quizData.js";
+import { addAttempt, addSession, updateSession, getAllAttempts } from "../db.js";
 import { go } from "../router.js";
 
 // Stato corrente esame in memoria
@@ -36,7 +36,9 @@ function risposteForFase() {
 }
 
 async function startExam(root) {
-  const { base, vela } = await buildExamSet();
+  const attempts = await getAllAttempts();
+  const weights = buildWeightsFromAttempts(attempts);
+  const { base, vela } = await buildExamSet(Date.now(), weights);
   const now = Date.now();
   const sessionId = await addSession({
     startedAt: now,
